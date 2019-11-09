@@ -8,23 +8,23 @@ This project is a simulation of a very simple remote control. It has an on butto
 
 #### Concepts
 
-Loops
-Switches
-If's
-Methods
+- Loops
+- Switches
+- If's
+- Methods
 
 #### Technologies Used
 
-Java
-Git
-Eclipse
-Terminal
+- Java
+- Git
+- Eclipse
+- Terminal
 
 #### Lessoned Learned
 
-Loops
-Switches
-If's
-Methods
-Terinary Operators
-User I/O
+- Loops
+- Switches
+- If's
+- Methods
+- Terinary Operators
+- User I/O
