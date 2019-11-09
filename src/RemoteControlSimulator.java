@@ -4,28 +4,27 @@ public class RemoteControlSimulator {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
+
 		boolean running = true;
 		String userString;
-		
-		while(running) {
-			
+
+		while (running) {
+
 			System.out.print("To begin, please press ON");
 			userString = input.next();
-			
-			if(userString.toUpperCase().contentEquals("ON")) {
+
+			if (userString.toUpperCase().contentEquals("ON")) {
 				running = false;
 				break;
 			}
 		}
-		pressButton(-2);
-		turningOn();
-		
+		turnOn();
+
 		running = true;
-		while(running) {
+		while (running) {
 			System.out.print("Press any button 1-9 or press \"OFF\": ");
 			userString = input.next();
-			switch(userString.toUpperCase()) {
+			switch (userString.toUpperCase()) {
 				case "0":
 					pressButton(0);
 					break;
@@ -54,31 +53,31 @@ public class RemoteControlSimulator {
 					pressButton(9);
 					break;
 				case "OFF":
-					pressButton(-1);
+					turnOff();
 					running = false;
 					break;
 				default:
 					System.out.println("Command not recognized!");
 			}
 		}
-		
-		
-		
+
 		input.close();
 	}
-	
-	public static void turningOn() {
-		System.out.println("TURNING ON");
+
+	public static void turnOn() {
+		System.out.println("TURNING ON...");
 	}
-	public static void turningOff() {
+
+	public static void turnOff() {
 		System.out.println("TURNING OFF");
 	}
+
 	public static void pressButton(int button) {
-		System.out.println("BOOP!");
-		if(button == -1) {
-			turningOff();
-		}
+		pressButton();
 	}
-	
+
+	public static void pressButton() {
+		System.out.println("BOOP!");
+	}
 
 }
